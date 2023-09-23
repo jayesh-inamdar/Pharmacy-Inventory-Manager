@@ -1,0 +1,82 @@
++<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Pharmacy-Stocks-Management-System</title>
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="asset/fontawesome/css/all.min.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="asset/css/adminlte.min.css">
+   </head>
+   <body class="hold-transition login-page">
+      <div class="login-box">
+         <!-- /.login-logo -->
+         <div class="card card-outline card-warning">
+            <div class="card-header text-center">
+               <a href="index.html" class="brand-link">
+               <img src="asset/img/logo.png" alt="DSMS Logo" width="200">
+               </a>
+               <h3>Pharmacy Manager</h3>
+            </div>
+            <div class="card-body" >
+               <form action="admin" method="post">
+                  <div class="input-group mb-3">
+                     <input type="text" class="form-control" placeholder="Username">
+                     <div class="input-group-append">
+                        <div class="input-group-text">
+                           <span class="fas fa-user"></span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="input-group mb-3">
+                     <input type="password" class="form-control" placeholder="Password">
+                     <div class="input-group-append">
+                        <div class="input-group-text">
+                           <span class="fas fa-lock"></span>
+                        </div>
+                     </div>
+                  </div>
+                  <a href="add-medicine.html" ></a>
+                  <div class="row">
+                     <div class="col-6 offset-3">
+                        
+                        <button type="submit" action = "authentication.php" onsubmit = "return validation()" class="btn btn-block btn-bg" method = "POST" style="background-color: rgba(242,175,88);">Sign In</button>
+                        
+                     </div>
+                  </div>
+               </a>
+               </form>
+            </div>
+      
+         </div>
+      
+      </div>
+   </div>  
+      
+   <script>  
+           function validation()  
+           {  
+               var id=document.f1.user.value;  
+               var ps=document.f1.pass.value;  
+               if(id.length=="" && ps.length=="") {  
+                   alert("User Name and Password fields are empty");  
+                   return false;  
+               }  
+               else  
+               {  
+                   if(id.length=="") {  
+                       alert("User Name is empty");  
+                       return false;  
+                   }   
+                   if (ps.length=="") {  
+                   alert("Password field is empty");  
+                   return false;  
+                   }  
+               }                             
+           }  
+       </script>  
+   </body>
+</html>
